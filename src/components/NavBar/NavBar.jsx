@@ -9,7 +9,7 @@ const NavBar = () => {
         className={({ isActive }) =>
           isActive
             ? 'btn btn-outline btn-success text-white font-semibold text-xl'  // Active state
-            : 'text-xl text-black font-semibold'  // Inactive state
+            : 'text-xl font-semibold'  // Inactive state
         }
       >
         Home
@@ -21,7 +21,7 @@ const NavBar = () => {
         className={({ isActive }) =>
           isActive
             ? 'btn btn-outline btn-success text-white font-semibold text-xl'  // Active state
-            : 'text-xl text-black font-semibold'  // Inactive state
+            : 'text-xl font-semibold'  // Inactive state
         }
       >
         Author
@@ -33,7 +33,7 @@ const NavBar = () => {
         className={({ isActive }) =>
           isActive
             ? 'btn btn-outline btn-success text-white font-semibold text-xl'  // Active state
-            : 'text-xl text-black font-semibold'  // Inactive state
+            : 'text-xl font-semibold'  // Inactive state
         }
       >
         Genre
@@ -45,7 +45,7 @@ const NavBar = () => {
         className={({ isActive }) =>
           isActive
             ? 'btn btn-outline btn-success text-white font-semibold text-xl'  // Active state
-            : 'text-xl text-black font-semibold'  // Inactive state
+            : 'text-xl font-semibold'  // Inactive state
         }
       >
         Listed Books
@@ -57,7 +57,7 @@ const NavBar = () => {
         className={({ isActive }) =>
           isActive
             ? 'btn btn-outline btn-success text-white font-semibold text-xl'  // Active state
-            : 'text-xl text-black font-semibold'  // Inactive state
+            : 'text-xl font-semibold'  // Inactive state
         }
       >
         Pages to Read
@@ -89,7 +89,7 @@ const NavBar = () => {
             {routes}
           </ul>
         </div>
-        <a className="btn btn-ghost text-3xl font-bold text-black">The Book Alley</a>
+        <a className="btn btn-ghost text-3xl font-bold">The Book Alley</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-x-4">
