@@ -9,6 +9,8 @@ import Root from "./components/Root/Root";
 import Home from "./components/Home/Home";
 import ListedBooks from "./components/ListedBooks/ListedBooks";
 import PagesToRead from "./components/PagesToRead/PagesToRead";
+import Author from "./components/Author/Author";
+import Genre from "./components/Genre/Genre";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
       {
         path: "/pagesToRead",
         element: <PagesToRead></PagesToRead>
+      }, 
+      {
+        path: "/author",
+        element: <Author></Author>
+      },
+      {
+        path: "/genre",
+        element: <Genre></Genre>
       }
     ]
   },
