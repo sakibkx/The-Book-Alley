@@ -1,12 +1,20 @@
+import { useState } from "react";
 import { MdOutlineStarBorder } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Book = (book) => {
 
   const { bookId, image, tags, bookName, author, category, rating } = book.book;
 
+  const navigate = useNavigate();
+
+  const handleBookClick = () => {
+    navigate(`/book/${bookId}`);
+
+    localStorage.setItem("scrollPosition", `${window.scrollY}`);
+  }
   return (
-    <Link to={`/book/${bookId}`}>
+    <div onClick={handleBookClick}>
       <div className="card w-96 shadow-xl border border-zinc-200 p-6">
         <figure className="bg-zinc-200 px-24 py-8">
           <img
@@ -30,7 +38,7 @@ const Book = (book) => {
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

@@ -1,6 +1,5 @@
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { MdOutlineStarBorder } from "react-icons/md";
 
 const ShowDetails = () => {
   const { id } = useParams(); // Extract the book ID from the URL
@@ -82,8 +81,11 @@ const ShowDetails = () => {
           </div>
 
           <div className="text-xl font-semibold">
+            
             <button className="btn btn-outline me-4"><span className="text-black">Read</span></button>
+            
             <button className="btn btn-info text-white">Wishlist</button>
+
           </div>
         </div>
       </div>
