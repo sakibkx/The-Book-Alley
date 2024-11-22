@@ -11,7 +11,7 @@ const Book = (book) => {
   const handleBookClick = () => {
     navigate(`/book/${bookId}`);
 
-    localStorage.setItem("scrollPosition", `${window.scrollY}`);
+    sessionStorage.setItem("scrollPosition", `${window.scrollY}`);
   }
   return (
     <div onClick={handleBookClick}>

@@ -14,7 +14,7 @@ const saveReadBooks = id => {
 
 const getStoredWishlistedBooks = () => {
 
-  const storedWishlistedBooks = localStorage.getItem('wishlist');
+  const storedWishlistedBooks = sessionStorage.getItem('wishlist');
 
   return storedWishlistedBooks? JSON.parse(storedWishlistedBooks) : [] ;
 }

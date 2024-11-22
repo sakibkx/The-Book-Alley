@@ -6,7 +6,7 @@ const Books = () => {
   const [showBooks, setShowBooks] = useState(6); // Initial state
   const [expand, setExpand] = useState(false); // Track expansion state
   const [scrollPosition, setScrollPosition] = useState(0); // Track scroll position
-  const getStoredScrollPosition = localStorage.getItem("scrollPosition");
+  const getStoredScrollPosition = sessionStorage.getItem("scrollPosition");
 
   // Fetch books data
   useEffect(() => {
@@ -14,8 +14,8 @@ const Books = () => {
       .then((res) => res.json())
       .then((data) => setBooks(data));
 
-    // Check if showBooks state is in localStorage
-    const savedShowBooks = localStorage.getItem("showBooks");
+    // Check if showBooks state is in sessionStorage
+    const savedShowBooks = sessionStorage.getItem("showBooks");
     if (savedShowBooks) {
       setShowBooks(Number(savedShowBooks));
       setExpand(Number(savedShowBooks) === books.length); // Adjust the expand state based on stored value
@@ -32,10 +32,10 @@ const Books = () => {
 
     if (newExpandState) {
       setShowBooks(books.length);
-      localStorage.setItem("showBooks", books.length); // Store the updated value
+      sessionStorage.setItem("showBooks", books.length); // Store the updated value
     } else {
       setShowBooks(6);
-      localStorage.setItem("showBooks", 6); // Store the updated value
+      sessionStorage.setItem("showBooks", 6); // Store the updated value
     }
   };
 
