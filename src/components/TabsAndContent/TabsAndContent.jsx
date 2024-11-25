@@ -1,4 +1,5 @@
 import ReadBooks from "../ReadBooks/ReadBooks";
+import ShowWishlist from "../ShowWishlist/ShowWishlist";
 
 const TabsAndContent = () => {
   return (
@@ -17,7 +18,7 @@ const TabsAndContent = () => {
           aria-label="Wishlisted Books"
           defaultChecked />
         <div role="tabpanel" className="tab-content border-t-base-300 p-6">
-          Tab content 2
+          <ShowWishlist></ShowWishlist>
         </div>
       </div>
     </div>
