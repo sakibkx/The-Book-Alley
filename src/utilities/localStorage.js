@@ -8,6 +8,11 @@ const getStoredReadBooks = () => {
 const saveReadBooks = id => {
 
   const storedReadBooks = getStoredReadBooks();
+  
+  const storedWishlist = getStoredWishlistedBooks();
+  const newWishlist = storedWishlist.filter( bookId => bookId != id);
+  localStorage.setItem('wishlist', JSON.stringify(newWishlist));
+
   storedReadBooks.push(id);
   localStorage.setItem('read-books', JSON.stringify(storedReadBooks));
 }
