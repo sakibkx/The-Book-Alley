@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { MdOutlineStarBorder } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const Book = (book) => {
         <figure className="bg-zinc-200 px-24 py-8">
           <img
             src={image}
-            alt="Shoes" className="h-44" />
+            alt="Book Image" className="h-44" />
         </figure>
         <div className="card-body p-0 gap-0">
           <div className="mt-6 mb-4">
