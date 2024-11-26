@@ -8,7 +8,6 @@ const ListedBooks = () => {
   sessionStorage.clear();
 
   const [active, setActive] = useState(false);
-  const [books, setBooks] = useState([]);
   const [sortedReadBooks, setSortedReadBooks] = useState([]);
   const [sortedWishlist, setSortedWishlist] = useState([]);
 
@@ -19,9 +18,7 @@ const ListedBooks = () => {
   useEffect(() => {
     fetch("/Books.json") // Ensure the JSON file is served from the "public" folder.
       .then((res) => res.json())
-      .then((data) => {
-        setBooks(data);
-        // Initialize sorted lists based on stored IDs
+      .then((data) => {// Initialize sorted lists based on stored IDs
         setSortedReadBooks(readBooks.map((id) => data[id - 1]));
         setSortedWishlist(wishList.map((id) => data[id - 1]));
       });
