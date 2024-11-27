@@ -17,30 +17,6 @@ const NavBar = () => {
     </li>
     <li>
       <NavLink
-        to="/author"
-        className={({ isActive }) =>
-          isActive
-            ? 'btn btn-outline btn-success text-white font-semibold text-xl'  // Active state
-            : 'text-xl font-semibold'  // Inactive state
-        }
-      >
-        Author
-      </NavLink>
-    </li>
-    <li>
-      <NavLink
-        to="/genre"
-        className={({ isActive }) =>
-          isActive
-            ? 'btn btn-outline btn-success text-white font-semibold text-xl'  // Active state
-            : 'text-xl font-semibold'  // Inactive state
-        }
-      >
-        Genre
-      </NavLink>
-    </li>
-    <li>
-      <NavLink
         to="/listedBooks"
         className={({ isActive }) =>
           isActive
@@ -49,18 +25,6 @@ const NavBar = () => {
         }
       >
         Listed Books
-      </NavLink>
-    </li>
-    <li>
-      <NavLink
-        to="/pagesToRead"
-        className={({ isActive }) =>
-          isActive
-            ? 'btn btn-outline btn-success text-white font-semibold text-xl'  // Active state
-            : 'text-xl font-semibold'  // Inactive state
-        }
-      >
-        Pages to Read
       </NavLink>
     </li>
   </>
